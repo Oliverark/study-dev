@@ -102,5 +102,5 @@ A grade atual está densamente construída com foco na "Escola Corporate", entre
 ---
 <div align="center">
   <i>"Não existe perfeito — existe lançado."</i><br>
-  Criado por <a href="#">Seu Nome</a>
+  Criado por <a href="#">Neguchads</a>
 </div>
