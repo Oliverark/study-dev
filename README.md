@@ -124,5 +124,5 @@ A beleza desta arquitetura é que **não há processo de build** e **não há de
 
 <div align="center">
   <i>"Não existe perfeito — existe lançado."</i><br>
-  Criado por <strong>Gustavo (Oliverark)</strong>
+  Criado por <strong>Gustavo (neguchads)</strong>
 </div>
