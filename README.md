@@ -45,7 +45,7 @@ Nós encorajamos contribuições! Para manter uma comunidade saudável e produti
 Levamos a segurança a sério.
 
 * **Validação:** A aplicação realiza sanitização de entradas para evitar injeção de código e comportamentos inesperados.
-* **Relatando Vulnerabilidades:** Se você encontrar alguma falha de segurança, por favor **NÃO** abra uma issue pública. Entre em contato diretamente com os mantenedores através do e-mail `suporte@chad-devstudy.com`.
+* **Relatando Vulnerabilidades:** Se você encontrar alguma falha de segurança, por favor **NÃO** abra uma issue pública. Entre em contato diretamente com os mantenedores através do e-mail `neguchads@gmail.com`.
 
 ### ⚖️ Licença
 
@@ -94,7 +94,7 @@ We encourage contributions! To maintain a healthy and productive community, plea
 We take security seriously.
 
 * **Validation:** The application performs input sanitization to prevent code injection and unexpected behavior.
-* **Reporting Vulnerabilities:** If you find any security flaws, please **DO NOT** open a public issue. Contact the maintainers directly via email at `suporte@chad-devstudy.com`.
+* **Reporting Vulnerabilities:** If you find any security flaws, please **DO NOT** open a public issue. Contact the maintainers directly via email at `neguchads@gmail.com`.
 
 ### ⚖️ License
 
