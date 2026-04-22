@@ -1,124 +1,73 @@
-<div align="center">
-  <h1>🚀 Chad-DevStudy LMS</h1>
-  <p><strong>A Serverless, Fully Client-Side Learning Management System</strong></p>
-  
-  [![Status](https://img.shields.io/badge/Status-Completed-success.svg)](#)
-  [![License](https://img.shields.io/badge/License-MIT-blue.svg)](#)
-  [![Tech](https://img.shields.io/badge/Vanilla-JS%20%7C%20CSS%20%7C%20HTML-f0db4f.svg)](#)
-</div>
+# 🚀 Chad-DevStudy LMS
 
-<div align="center">
-  <h4>
-    <a href="#english-version">🇺🇸 Read in English</a> | 
-    <a href="#versão-em-português">🇧🇷 Leia em Português</a>
-  </h4>
-</div>
+Uma plataforma educacional interativa, 100% client-side e sem servidor, projetada para transformar o aprendizado de programação em uma experiência gamificada e segura.
 
----
+## 📂 Estrutura do Projeto
 
-<h2 id="english-version">🇺🇸 English Version</h2>
+```text
+chad-devstudy/
+├── css/               # Estilos Vanilla CSS (Glassmorphism & Design System)
+├── js/                # Lógica da aplicação, Pyodide worker e Banco de Dados (data.js)
+├── assets/            # Imagens, ícones e arquivos estáticos
+├── index.html         # Ponto de entrada da aplicação (SPA)
+├── LICENSE            # Licença MIT
+└── README.md          # Documentação principal
+```
 
-> **Note on Content Language:** While the platform's engine, architecture, and codebase are built for global scale (100% Client-Side), the *curriculum content* inside the database (`data.js`) is currently written in Portuguese (PT-BR), as it was originally designed for the Brazilian educational market.
+## ✨ Funcionalidades Principais
 
-The **Chad-DevStudy LMS** is an end-to-end interactive educational platform designed to run **100% in the browser** (Client-Side). With no external database or hosted back-end required, it renders an extensive Markdown curriculum, persisting state via `localStorage` with full gamification and productivity features.
+* ⚡ **Arquitetura Serverless:** 100% no navegador. Dados em JSON nativo para latência zero.
+* 📚 **Renderização Markdown:** Aulas ricas com snippets de código e diagramas via `marked.js`.
+* 🧠 **Retenção Ativa:** Flashcards 3D, Quizzes Inline e o método "Palácio da Memória".
+* 🐍 **Python no Browser:** Terminal integrado via **WebAssembly** (`Pyodide`) rodando em Web Workers.
+* 🛡️ **Segurança Avançada:** Sanitização via `DOMPurify` e políticas de CSP estritas.
+* ⏳ **Foco (Pomodoro):** Timer integrado para sessões de estudo profundo.
 
-Developed as a portable project, its current curriculum focuses on a "Zero to Junior" roadmap for Software Developers, featuring over **192 lessons, quizzes, and flashcards**.
+## 🚀 Como Rodar Localmente
 
-### ✨ Key Features
-
-* ⚡ **Serverless Architecture:** Everything happens on the client side. Data lives in a native JSON object for instant rendering, resulting in zero latency.
-* 📚 **Rich Rendering:** Lessons written in Markdown (via `marked.js`), perfectly rendering code snippets and diagrams.
-* 🧠 **Active Retention:**
-  * Interactive **3D Flashcards** (CSS dynamic flip).
-  * **Inline Quizzes** at the end of each lesson with immediate feedback.
-  * **Weekly Exams** for consolidated review.
-  * **Memory Palace:** Narrative mnemonics and metaphors for playful retention.
-* 💾 **Secure Persistence:** User state (progress) is automatically saved in `localStorage`, with native support for importing/exporting `.json` backups.
-* 🐍 **Real-Time Code Execution:** Integrated terminal running pure Python directly in the browser via **WebAssembly** (`Pyodide`). Runs in the background via Web Workers to prevent UI freezing (Anti-DoS).
-* 🛡️ **Front-End Hardening:** Active protection with Markdown Sanitization (`DOMPurify`), XSS prevention via route escaping, and strict Content-Security-Policy (CSP).
-* ⏳ **Productivity (Pomodoro):** Integrated timer focused on 25-minute deep focus blocks.
-* 🎨 **Modern Design:** "Dark Mode" interface featuring Glassmorphism and CSS micro-animations.
-
-### 🛠️ Tech Stack
-
-| Layer | Main Technology | Description |
-|--------|----------------------|-----------|
-| **Core UI** | HTML5 / Vanilla JS | Single Page Application (SPA) creation. |
-| **Styling** | Vanilla CSS | Design system without external frameworks. |
-| **Parser** | `marked.js` | Runtime Markdown to HTML transpilation. |
-| **Engine** | `Pyodide` (WASM) | Real Python interpreter embedded in the web app. |
-| **Isolation**| `Web Workers` | Python execution in background thread (Auto-timeout). |
-| **Security** | `DOMPurify` & CSP | Protection against XSS injections and data exfiltration. |
-| **Storage** | `localStorage` API | Local persistence tied to the domain. |
-
-### 🚀 How to Run Locally
-
-The beauty of this architecture is that **there is no build process** and **no Node.js dependencies**. You don't need to run `npm install`.
-
-1. **Clone the repository:**
-   ```bash
-   git clone https://github.com/Neguchads/chad-devstudy.git
-   ```
-
-2. **Open the file in your browser:**
-   - You can simply double-click the `index.html` file to open it locally (the `file://` protocol supports most functions).
-   - *Recommended alternative (to avoid CORS blocking for fonts/modules):* Run a simple static server. If you have Python installed:
-     ```bash
-     python -m http.server 3000
-     ```
-   - Access `http://localhost:3000/`.
-
----
-
-<h2 id="versão-em-português">🇧🇷 Versão em Português</h2>
-
-O **Chad-DevStudy LMS** é uma plataforma educacional interativa de ponta a ponta projetada para rodar **100% no navegador** (Client-Side). Sem necessidade de banco de dados externo ou back-end hospedado, ele renderiza um currículo extensivo em Markdown, persistindo o estado via `localStorage` com recursos completos de gamificação e produtividade.
-
-Desenvolvido como um projeto portável, seu currículo atual foca na formação "Zero to Junior" para Desenvolvedores de Software, contando com mais de **192 aulas, quizzes e flashcards**.
-
-### ✨ Features Principais
-
-* ⚡ **Arquitetura Serverless:** Tudo acontece no lado do cliente. Os dados vivem em um objeto JSON nativo para renderização instantânea, resultando em latência zero.
-* 📚 **Renderização Rica:** Aulas escritas em Markdown (via `marked.js`), renderizando perfeitamente snippets de código e diagramas.
-* 🧠 **Retenção Ativa:**
-  * **Flashcards 3D** iterativos (flip dinâmico em CSS).
-  * **Quizzes Inline** ao final de cada lição com feedback imediato.
-  * **Exames Semanais** para revisão consolidada.
-  * **Palácio da Memória:** Mnemônicas e metáforas narrativas para retenção lúdica.
-* 💾 **Persistência Segura:** O estado do usuário (progresso) é salvo automaticamente no `localStorage`, com suporte nativo a importação/exportação de backups `.json`.
-* 🐍 **Execução de Código em Tempo Real:** Terminal integrado executando Python puro direto no browser através de **WebAssembly** (`Pyodide`). Rodando em background via Web Workers para evitar travamentos (Anti-DoS).
-* 🛡️ **Blindagem Front-end:** Proteção ativa com Sanitização de Markdown (`DOMPurify`), prevenção de XSS via escaping de rotas e políticas estritas de Content-Security-Policy (CSP).
-* ⏳ **Produtividade (Pomodoro):** Timer integrado à plataforma focado em blocos de foco profundo de 25 minutos.
-* 🎨 **Design Moderno:** Interface no estilo "Dark Mode" contendo Glassmorphism e micro-animações CSS.
-
-### 🛠️ Stack Tecnológica
-
-| Camada | Tecnologia Principal | Descrição |
-|--------|----------------------|-----------|
-| **Core UI** | HTML5 / Vanilla JS | Criação da Single Page Application (SPA). |
-| **Estilização** | Vanilla CSS | Design system sem frameworks externos. |
-| **Parser** | `marked.js` | Transpilação de Markdown para HTML em tempo de execução. |
-| **Engine** | `Pyodide` (WASM) | Interpretador Python real embutido na aplicação web. |
-| **Isolamento** | `Web Workers` | Execução do Python em background thread (Auto-timeout). |
-| **Segurança** | `DOMPurify` & CSP | Proteção contra injeções XSS e exfiltração de dados. |
-| **Storage** | `localStorage` API | Persistência local atrelada ao domínio. |
-
-### 🚀 Como Rodar Localmente
-
-A beleza desta arquitetura é que **não há processo de build** e **não há dependências do Node.js**. Você não precisa rodar `npm install`.
+Este projeto não possui dependências de Node.js ou processos de build.
 
 1. **Clone o repositório:**
    ```bash
    git clone https://github.com/Neguchads/chad-devstudy.git
    ```
-
-2. **Abra o arquivo no seu navegador:**
-   - Você pode simplesmente dar um duplo-clique no arquivo `index.html` para abri-lo localmente (o protocolo `file://` suporta a maioria das funções).
-   - *Alternativa recomendada (para evitar bloqueios CORS de fontes/Módulos):* Rode um servidor estático simples. Se tiver o Python instalado:
+2. **Abra no navegador:**
+   - Basta abrir o arquivo `index.html`.
+   - *Recomendado:* Use um servidor estático simples para evitar bloqueios de CORS:
      ```bash
      python -m http.server 3000
      ```
-   - Acesse `http://localhost:3000/`.
+
+## 🤝 Contribuição e Comunidade
+
+Nós encorajamos contribuições! Para manter uma comunidade saudável e produtiva, siga estas diretrizes:
+
+### Como Contribuir
+
+1. Faça um **Fork** do projeto.
+2. Crie uma **Branch** para sua funcionalidade ou correção (`git checkout -b feature/MinhaNovaFuncionalidade`).
+3. Faça o **Commit** das suas alterações (`git commit -m 'Feat: Adiciona MinhaNovaFuncionalidade'`).
+4. Faça o **Push** para a branch (`git push origin feature/MinhaNovaFuncionalidade`).
+5. Abra um **Pull Request**.
+
+### Regras da Comunidade
+
+* **Respeito:** Seja gentil e profissional com todos os contribuidores.
+* **Clareza:** Escreva mensagens de commit e descrições de Pull Requests de forma descritiva e direta.
+* **Qualidade de Código:** Garanta que seu código siga padrões de Vanilla JS e CSS limpo.
+* **Issues:** Antes de iniciar uma mudança arquitetural ou adicionar uma funcionalidade muito grande, abra uma *Issue* para discutirmos a abordagem.
+
+## 🛡️ Segurança
+
+Levamos a segurança a sério.
+
+* **Validação:** A aplicação utiliza `DOMPurify` para sanitização de entradas e prevenção de XSS (Cross-Site Scripting).
+* **Isolamento:** A execução de scripts Python ocorre em um Web Worker isolado para prevenir travamentos e ataques de negação de serviço local (DoS).
+* **Relatando Vulnerabilidades:** Se você encontrar alguma falha de segurança, por favor **NÃO** abra uma issue pública. Entre em contato diretamente com os mantenedores.
+
+## ⚖️ Licença
+
+Este projeto é distribuído sob a licença **MIT**. Veja o arquivo `LICENSE` para mais detalhes.
 
 ---
 
