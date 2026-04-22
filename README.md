@@ -1,5 +1,5 @@
 <div align="center">
-  <h1>🚀 Study-Dev LMS</h1>
+  <h1>🚀  Chad-DevStudy LMS</h1>
   <p><strong>A Serverless, Fully Client-Side Learning Management System</strong></p>
   
   [![Status](https://img.shields.io/badge/Status-Completed-success.svg)](#)
